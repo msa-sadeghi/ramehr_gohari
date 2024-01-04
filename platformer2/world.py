@@ -5,6 +5,7 @@ from enemy import Enemy
 from lava import Lava
 from exit import ExitDoor
 from coin import Coin
+from myplatform import Platform
 
 def draw_grid(screen):
     for line in range(20):
@@ -17,7 +18,7 @@ def draw_grid(screen):
 
 
 class World:
-    def __init__(self, data, blob_group, lava_group, exit_group, coin_group) -> None:
+    def __init__(self, data, blob_group, lava_group, exit_group, coin_group, platform_group) -> None:
         self.tile_list = []
 
         dirt_img = pygame.image.load("img\dirt.png")
@@ -26,6 +27,7 @@ class World:
         self.lava_group = lava_group
         self.exit_group = exit_group
         self.coin_group = coin_group
+        self.platform_group = platform_group
         for row_index, row in enumerate(data):
             for tile_index, tile in enumerate(row):
                 if tile == 1:
@@ -48,6 +50,13 @@ class World:
                 if tile == 3:
                     blob = Enemy(tile_index * TILE_SIZE,row_index * TILE_SIZE +15)
                     self.blob_group.add(blob)
+
+                if tile == 4:
+                    platform = Platform(tile_index * TILE_SIZE,row_index * TILE_SIZE, 1, 0)
+                    self.platform_group.add(platform)
+                if tile == 5:
+                    platform = Platform(tile_index * TILE_SIZE,row_index * TILE_SIZE, 0, 1)
+                    self.platform_group.add(platform)
 
                 if tile == 6:
                     lava = Lava(tile_index * TILE_SIZE,(row_index+1) * TILE_SIZE)

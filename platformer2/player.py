@@ -9,7 +9,7 @@ class Player(Sprite):
         self.reset(x,y)
         
 
-    def update(self, screen, tile_list, blob_group, lava_group,exit_door_group, game_status, coin_group):
+    def update(self, screen, tile_list, blob_group, lava_group,exit_door_group, game_status, coin_group, score):
         if self.direction == 1:
             rect = pygame.Rect(self.rect.x + 20, self.rect.y + 5, self.image.get_width()-30,self.image.get_height()-10)
         else:
@@ -87,6 +87,7 @@ class Player(Sprite):
                 game_status = 'exit'
             if pygame.sprite.spritecollide(self, coin_group, True):
                 coin_sound.play()
+                score += 1
             
             
             
@@ -108,7 +109,7 @@ class Player(Sprite):
        
         screen.blit(self.image, self.rect)
         # pygame.draw.rect(screen, (145,10,178), rect, 4)
-        return game_status
+        return game_status, score
 
 
     def reset(self, x,y):
