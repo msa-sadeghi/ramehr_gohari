@@ -9,7 +9,7 @@ class Player(Sprite):
         self.reset(x,y)
         
 
-    def update(self, screen, tile_list, blob_group, lava_group,exit_door_group, game_status, coin_group, score):
+    def update(self, screen, tile_list, blob_group, lava_group,exit_door_group, game_status, coin_group, score, platform_group):
         if self.direction == 1:
             rect = pygame.Rect(self.rect.x + 20, self.rect.y + 5, self.image.get_width()-30,self.image.get_height()-10)
         else:
@@ -76,20 +76,44 @@ class Player(Sprite):
                         self.inair = False
                         self.vel_y = 0
                         dy = tile[1].top - rect.bottom
-        
-            if pygame.sprite.spritecollide(self, blob_group, False):
-                game_status = 'game_over'
-                game_over_sound.play()
-            if pygame.sprite.spritecollide(self, lava_group, False):
-                game_status = 'game_over'
-                game_over_sound.play()
+            pygame.draw.rect(screen, (255,0,0,), rect, 5)
+            # if pygame.sprite.spritecollide(self, blob_group, False):
+            for blob in blob_group:
+                if blob.rect.colliderect(rect):
+                    game_status = 'game_over'
+                    game_over_sound.play()
+                    break
+            # if pygame.sprite.spritecollide(self, lava_group, False):
+                for lava in lava_group:
+                    if lava.rect.colliderect(rect):
+                        game_status = 'game_over'
+                        game_over_sound.play()
+                        break
             if pygame.sprite.spritecollide(self, exit_door_group, False):
                 game_status = 'exit'
             if pygame.sprite.spritecollide(self, coin_group, True):
                 coin_sound.play()
                 score += 1
             
-            
+            for platform in platform_group:
+                if platform.rect.colliderect(rect.x + dx, rect.y, self.image.get_width()-30,self.image.get_height()-10):
+                    dx = 0
+                if platform.rect.colliderect(rect.x, rect.y + dy, self.image.get_width()-30,self.image.get_height()-10):
+                    if abs(rect.top + dy - platform.rect.bottom) < 20:
+                        self.vel_y = 0
+                        dy = platform.rect.bottom - self.rect.top
+                    elif abs(rect.bottom + dy - platform.rect.top) <20:
+
+                        rect.bottom = platform.rect.top + 1
+                        dy = 0
+                        self.inair = False
+                    if platform.move_x != 0:
+                        self.rect.x += platform.direction
+                    if platform.move_y != 0:
+                        if rect.top  - platform.rect.bottom < 0:
+
+                            self.rect.y += platform.direction
+
             
             self.rect.x += dx
             self.rect.y += dy

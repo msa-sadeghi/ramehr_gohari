@@ -84,7 +84,7 @@ while running:
         # draw_grid(screen)
         world.draw(screen)
         draw_text(f'X {score}', font_score, (255,255,255), 10,10)
-        game_status,score =player.update(screen, world.tile_list, blob_group, lava_group,exit_door_group,game_status, coin_group, score)
+        game_status,score =player.update(screen, world.tile_list, blob_group, lava_group,exit_door_group,game_status, coin_group, score, platform_group)
         if game_status == "game_over":
             restart_button.draw(screen)
             if restart_button.clicked():
