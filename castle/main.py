@@ -1,16 +1,57 @@
-# This is a sample Python script.
+import pygame
+from pygame.sprite import Sprite
+pygame.init()
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+clock = pygame.time.Clock()
+FPS = 60
+
+bg = pygame.image.load("img/bg.png")
+castle_img_100 = pygame.image.load("img/castle/castle_100.png")
+
+class Castle:
+    def __init__(self, image100, x,y, scale):
+        self.health = 1000
+        self.max_health = self.health
+
+        self.image100 = pygame.transform.scale(image100, (image100.get_width() * scale, image100.get_height() * scale))
+        self.rect = self.image100.get_rect(topleft = (x,y))
+    def draw(self):
+        self.image = self.image100
+        screen.blit(self.image, self.rect)
+
+    def shoot(self):
+        pass
+
+class Bullet(Sprite):
+    def __init__(self, image, x,y, angle):
+        super().__init__()
+        self.image = image
+        self.rect = self.image.get_rect(topleft = (x,y))
+        # TODO add dx and dy
+        # TODO Add angle
+        self.speed = 10
+
+    def update(self):
+        self.rect.x += self.speed
+        self.rect.y += self.speed
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+
+castle = Castle(castle_img_100, SCREEN_WIDTH - 200, SCREEN_HEIGHT - 300, 0.2)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+bullet_group = pygame.sprite.Group()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    screen.blit(bg, (0,0))
+    castle.draw()
+    pygame.display.update()
