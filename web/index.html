@@ -11,17 +11,37 @@
         margin: 0;
       }
       .test {
-        width: 600;
-        height: 600px;
-        background-color: red;
-        font-size: 50px;
-        border: 20px solid blue;
-        padding: 50px;
-        margin: 60px;
+        color: red;
+        width: 300px;
+        background-color: yellow;
+        text-transform: lowercase;
+        padding: 20px;
+        text-indent: 25px;
+        letter-spacing: -1px;
+        word-spacing: 3px;
+        text-shadow: 5px 5px 9px green;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 32px;
+        text-decoration: line-through;
+      }
+      div.test span {
+        writing-mode: vertical-lr;
       }
     </style>
   </head>
   <body>
-    <div class="test">hello</div>
+    <div class="test">
+      loremmmmmmrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr ipsum
+      dolor sit amet consectetur adipisicing elit. Ex ea excepturi impedit
+      aspernatur <span>animi</span>animi cupiditate consectetur, voluptatibus
+      temporibus magnam, quis veritatis. Ut nemo perferendis excepturi dolorum
+      aperiam eaque omnis voluptatem. <span>price : 100</span>
+    </div>
+    <a href="https://google.com">google</a>
   </body>
 </html>
