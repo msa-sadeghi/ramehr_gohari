@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
       * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
+        font-family: Vazir-Light;
       }
       @font-face {
         font-family: Vazir-Bold;
@@ -18,74 +30,80 @@
         font-family: Vazir-Light;
         src: url(./Vazirmatn-Light.woff2);
       }
-      p {
-        font-family: Vazir-Bold, Tahoma, Geneva, Verdana, sans-serif;
+      .test {
+        color: red;
       }
-      p.test2 {
-        font-family: Vazir-Light;
+      li {
+        display: inline;
+        padding: 10px;
       }
-      header {
-        width: 100%;
-        height: 100vh;
-        background-color: aqua;
-        background-image: url(./car.jpg);
-        background-clip: border-box;
-        background-attachment: fixed;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+
+      span {
+        vertical-align: -8px;
+        padding: 10px;
       }
-      p {
-        background-color: bisque;
+      i {
+        vertical-align: -2px;
+        padding: 10px;
+      }
+      nav {
+        background-color: #efefef;
+        text-align: right;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+      }
+      nav li a {
+        text-decoration: none;
+      }
+      nav li:hover {
+        background-color: rgba(223, 223, 18, 0.872);
+        color: whitesmoke;
+        cursor: pointer;
+      }
+      .parent {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(174, 89, 89);
+        position: relative;
+        text-align: center;
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+        background-color: yellowgreen;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      .fix {
+        background-color: black;
+        width: 50px;
+        height: 50px;
       }
     </style>
   </head>
   <body>
-    <header></header>
-    <div>
-      <p dir="rtl">
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
-        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
-        سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای
-        متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
-        درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
-        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان
-        خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
-        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان
-        رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
-        پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. لورم ایپسوم
-        متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
-        گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
-        لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
-        بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال
-        و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها
-        شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ
-        پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
-        دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان
-        مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل
-        دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. لورم ایپسوم متن ساختگی
-        با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
-        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و
-        برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
-        ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
-        آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت
-        بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو
-        در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری
-        موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز
-        شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
-        طراحی اساسا مورد استفاده قرار گیرد. لورم ایپسوم متن ساختگی با تولید
-        سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و
-        متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط
-        فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
-        می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-        جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
-        طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی
-        ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-        راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
-        دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا
-        مورد استفاده قرار گیرد.
-      </p>
-      <p class="test2">سلام چطوری</p>
+    <nav>
+      <ul>
+        <li>
+          <a href="">خانه<i class="fa-solid fa-bars"></i></a>
+        </li>
+        <li>
+          فروشگاه<span class="material-symbols-outlined test"> menu </span>
+        </li>
+        <li>بلاگ</li>
+        <li>درباره ما</li>
+      </ul>
+    </nav>
+    
+    <div class="parent">
+      parent
+      <div class="child">child</div>
     </div>
+    <div class="fix"></div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </body>
 </html>
