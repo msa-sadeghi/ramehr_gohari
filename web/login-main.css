@@ -1,0 +1,67 @@
+@import url(./login-util.css);
+@font-face {
+    font-family: Vazir-Bold;
+    src: url(./Vazirmatn-Bold.woff2);
+}
+@font-face {
+    font-family: Vazir-Light;
+    src: url(./Vazirmatn-Light.woff2);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Vazir-Light;
+}
+header{
+    text-align: center;
+    background-color: #efefef;
+    height: 80px;
+    font-family: Vazir-Bold;
+    padding: 10px;
+    
+}
+main{
+font-family: Vazir-Light;
+}
+
+input[type="text"], input[type="password"]{
+    outline: none;
+    
+    padding-right: 30px;
+}
+input[type="button"]{
+padding: 10px;
+background-color: rgba(42, 145, 229, 0.63);
+border-radius: 10px;
+border-color: transparent;
+margin-top: 14px;
+width: 50%;
+font-size: 18px;
+margin-bottom: 10px;
+height: 100%;
+
+}
+.input-container{
+    padding-top: 10px;
+    margin-top: 10px;
+    height: 60px;
+    border: 3px solid #efefef;
+    border-radius: 10px;
+    text-align: center;
+}
+.input-container input{
+    width: 80%;
+    height: 100%;
+    border: 1px solid #efefef;
+    border-radius: 10px;
+}
+.input-container input:focus{
+    border: 3px solid #dfdfdf;
+    
+  
+}
+.button-container{
+    text-align: center;
+    margin: 10px;
+}
