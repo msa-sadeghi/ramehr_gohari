@@ -1,0 +1,192 @@
+/* .transform{
+    width:200px;
+    height: 150px;
+    background-color: blue;
+
+}
+
+.transform:hover{
+    transform: translateX(100px);
+    transform: rotateX(90deg);
+    transform: scale(2,3);
+    transform: skewY(45deg);
+} */
+
+/* .parent{
+    width:200px;
+    height: 200px;
+    background-color: green;
+    position: relative;
+    perspective: 400px;
+    perspective-origin: top;
+}
+.child{
+    width:80px;
+    height: 80px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%) rotateX(60deg);
+    transform-style: preserve-3d;
+} */
+
+/* .test1, .test2{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+
+.test1:hover{
+    transform: rotateY(180deg);
+}
+.test2{
+    backface-visibility: hidden;
+}
+.test2:hover{
+    transform: rotateY(180deg);
+    /* backface-visibility: visible; 
+}
+
+*/
+
+.test4{
+    width: 300px;
+    height: 50px;
+    background-color: lightcoral;
+    padding: 10px;
+    transition-property: all;
+    transition-duration: 2s;
+   
+}
+.test4:hover{
+    background-color: red;
+    width: 600px;
+}
+
+
+.loading{
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:100px;
+    height: 100px;
+    border: 10px dashed #efefef;
+    border-radius: 50%;
+    border-left:10px solid red;
+    animation: loading 3s linear infinite;
+}
+
+@keyframes loading {
+   /* from{transform: rotate(0deg);}
+   to{transform: rotate(360deg);} */
+   0%{transform: rotate(0deg);}
+   100%{transform: rotate(360deg);}
+    
+}
+
+.test5{
+    width: 100px;
+    height: 50px;
+    background-color: lightblue;
+    animation: test 4s linear 3;
+
+}
+@keyframes test {
+    0%{
+        background-color: blue;
+        width: 120px;
+    }
+    25%{
+        background-color: rgb(251, 0, 255);
+        width: 140px;
+    }
+    50%{
+        background-color: rgb(0, 255, 4);
+        width: 160px;
+    }
+    75%{
+        background-color: rgb(154, 86, 8);
+        width: 180px;
+    }
+    100%{
+        background-color: rgb(137, 7, 48);
+        width: 200px;
+    }
+}
+
+
+.test6,.test7{
+    margin-bottom: 20px;
+    width:100px;
+    height: 50px;
+    background-color: green;
+    font-size: 32px;
+}
+
+.test6:hover,.test7:hover{
+    transform: rotateY(180deg);
+}
+.test7{
+    backface-visibility: hidden;
+}
+.parent{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: relative;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    
+    perspective: 400px;
+}
+.child{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) rotateX(40deg);
+    width: 80px;
+    height: 80px;
+    background-color: yellow;
+}
+
+.flip-card{
+    width: 300px;
+    height: 400px;
+    perspective: 800px;
+   
+}
+
+.flip-card img{
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    box-shadow: 10px 10px 10px #000;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.flip-card-back, .flip-card-front{
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.flip-card-back{
+    transform: rotateY(180deg);
+    background-color: lightblue;
+}
