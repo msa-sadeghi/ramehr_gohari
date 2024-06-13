@@ -1,0 +1,13 @@
+.myx {
+    background-color: #efefef;
+   
+}
+
+.mynavi>a{
+    background-color: #efefef;
+    float: right;
+    padding: 14px 16px;
+    font-size: 16px;
+    text-align: center;
+}
+
