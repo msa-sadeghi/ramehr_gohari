@@ -29,10 +29,22 @@ body{
     .mynavi a:not(:first-child){
         display: none;
     }
+    .mynavi.responsive{
+        position: relative;
+    }
     .mynavi a.icon{
         display: block;
         float: left;
+        
+        
     }
+    .mynavi.responsive a.icon{
+        top: 0;
+        left: 0;
+        position: absolute;
+        
+    }
+    
     .mynavi.responsive a{
        
             display: block;
