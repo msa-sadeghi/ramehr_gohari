@@ -45,6 +45,10 @@ ul, li, ol{
     padding-left: 10px;
 }
 
+.p-0{
+    padding: 0;
+}
+
 .row::after{
     content: '';
     clear: both;
