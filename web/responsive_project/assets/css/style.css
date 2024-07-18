@@ -60,7 +60,7 @@ figure{
 figure img {
     display: block;
 }
-figure .overlay{
+.overlay{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
@@ -68,7 +68,7 @@ figure .overlay{
     
 }
 
-.card{
+figure .card{
     max-width:300px;
     background-color: antiquewhite;
     padding: 20px;
@@ -77,15 +77,15 @@ figure .overlay{
     height: 200px;
 }
 
-.card .card-header h1{
+figure .card .card-header h1{
     color: black;
 }
 
-.card .card-body p{
+figure .card .card-body p{
     color: rgb(26, 24, 24);
 }
 
-.card .card-body div{
+figure .card .card-body div{
     margin-top: 20px;
     float: left;
     background-color: orange;
@@ -95,19 +95,60 @@ figure .overlay{
 }
 
 @media screen and (max-width:965px){
-    .card{
+    figure .card{
             margin: 0;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
     }
-    .card .card-body p, .card .card-body div{
+    figure .card .card-body p, .card .card-body div{
         font-size: 14px;
     }
-    .card .card-header h1{
+    figure .card .card-header h1{
         font-size: 16px;
     }
 
 }
+.section-title span{
+    position: relative;
+    /* display: inline-block; */
+}
+.section-title span::before{
+    content: '';
+    width: 40px;
+    height: 4px;
+    background-color: orange;
+    position: absolute;
+    top: 15px;
+    right: -49px;
+}
+.section-title span::after{
+    content: '';
+    width: 40px;
+    height: 4px;
+    background-color: orange;
+    position: absolute;
+    top: 15px;
+    right: 135px;
+}
+.card .card-header img{
+    filter: brightness(0.5);
+}
+.card-body .product-title a{
+    font-size: 16px;
+    
+    text-decoration: none;
+}
+.card-body .product-title{
+    padding-right: 20px;
+}
+.card-body .product-title p{
+    font-size: 14px;
+    
+}
+
+.product .card{
+    box-shadow: 2px 2px 2px red;
    
+}

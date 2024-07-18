@@ -17,6 +17,7 @@
 .img-responsive{
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .center{
@@ -48,11 +49,21 @@ ul, li, ol{
 .p-0{
     padding: 0;
 }
+.mt-20{
+    margin-top: 20px;
+}
 
 .row::after{
     content: '';
     clear: both;
     display: table;
+}
+
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
 }
 
 /* Extra small devices (phones, 600px and down) */
