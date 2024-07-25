@@ -152,3 +152,100 @@ figure .card .card-body div{
     box-shadow: 2px 2px 2px red;
    
 }
+.about-us-wrapper{
+    
+    background-color: antiquewhite;
+    padding: 80px;
+    border-radius: 15px 10px 30px 50px;
+    min-height: 100%;
+}
+.about-us-wrapper h4{
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+.about-us-wrapper p{
+    margin-bottom: 40px;
+}
+.about-us-wrapper a{
+    text-decoration: none;
+    color: #fff;
+    background-color: orangered;
+    padding: 10px 30px;
+    border-radius: 4px 2px 6px 8px;
+    float: left;
+    margin-left: 30px;
+    font-size: 20px;
+    transition: 0.5s ease-in;
+}
+.about-us-wrapper a:hover{
+    border-radius: 8px 12px 6px 11px;
+}
+
+.team-intro{
+    background-color: #fff;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    border-radius: 5px;
+    padding: 30px;
+    transform: translate(-50%);
+    border: 1px solid rgb(237, 156, 7);  
+    width: 80%;
+    text-align: center;
+}
+.team-intro h5{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.team-intro a{
+    border:2px solid orange;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 30px;
+    border-radius: 3px;
+    
+    
+    transition: background-color 2s ease-in;
+}
+.team-intro a:hover{
+    background-color: orangered;
+}
+
+.products-views{
+    background-color: rgb(228, 228, 26);
+    text-align: center;
+    
+}
+.products-views .pr{
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.products-views .pr i:first-child{
+    margin-top: 40px;
+}
+
+.products-views .count{
+    margin : 40px 0;
+}
+.new-product .card:hover img{
+    transform: scale(1.2) rotate(10deg);
+}
+
+.new-product .card-header{
+    overflow: hidden;
+}
+.new-product .card-body{
+    position: relative;
+}
+
+.new-product .card-body .card-date{
+    position: absolute;
+    top: -25px;
+    left: 111px;
+}
+
+.new-product .card-body .card-date :first-child{
+    background-color: orange;
+}
+.new-product .card-body .card-date :last-child{
+    background-color: rgb(108, 107, 105);
+}
