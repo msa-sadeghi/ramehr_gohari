@@ -308,3 +308,43 @@ figure .card .card-body div{
     color: #706f6f;
     margin-left: 20px;
 }
+
+.faq-left-side .tabs {
+    background-color: #efdf03;
+    border-radius: 10px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.faq-left-side .tabs .tab label{
+background-color: #0680e4;
+width: 100%;
+display: block;
+cursor: pointer;
+}
+
+
+.faq-left-side .tabs .tab label::after{
+    content: '\276f';
+    float: left;
+}
+.faq-left-side .tabs .tab .answer{
+    height: 0;
+    transition: 1s ease-in-out;
+    
+    overflow: hidden;
+}
+.faq-left-side .tabs .tab .answer p {
+    padding: 10px;
+}
+.faq-left-side .tabs .tab input{
+    display: none;
+}
+.faq-left-side .tabs .tab input:checked ~ .answer{
+    height: 80px;
+}
+
+.faq-left-side .tabs .tab label{
+    padding: 10px;
+    overflow: hidden;
+}
