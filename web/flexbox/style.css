@@ -1,0 +1,16 @@
+.container{
+    background-color: blueviolet;
+    
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    
+}
+.container > div{
+    width: 100px;
+    /* height: 100px; */
+    line-height: 90px;
+    background-color: aqua;
+    margin: 10px;
+    font-weight: 900;
+}

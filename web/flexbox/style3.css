@@ -1,0 +1,23 @@
+.container{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.child{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.container > div{
+    background-color: red;
+    width: 100px;
+    /* height: 100px; */
+    margin: 15px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 100px;
+}

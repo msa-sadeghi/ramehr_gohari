@@ -327,12 +327,13 @@ cursor: pointer;
 .faq-left-side .tabs .tab label::after{
     content: '\276f';
     float: left;
+    transition: 0.5s;
 }
 .faq-left-side .tabs .tab .answer{
     height: 0;
     transition: 1s ease-in-out;
     
-    overflow: hidden;
+    overflow-y: scroll;
 }
 .faq-left-side .tabs .tab .answer p {
     padding: 10px;
@@ -347,4 +348,7 @@ cursor: pointer;
 .faq-left-side .tabs .tab label{
     padding: 10px;
     overflow: hidden;
+}
+.faq-left-side .tabs .tab input:checked + label::after{
+    transform: rotate(-90deg);
 }
