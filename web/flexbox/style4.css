@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    position: relative;
+
+}
+
+body{
+    font-family: vazir;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    
+}
+nav ul li{
+    padding: 10px;
+}
+
+header img{
+    width: 100%;;
+    height: auto;
+    
+}
+header h1{
+    margin: 35px;
+    position: absolute;
+}
+
+.container{
+    /* max-width: 1200px; */
+    margin-top: 10px;
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container aside{
+    font-family: vazir;
+    background-color: #969191;
+    flex: 20%;
+    border-radius: 25px 0 0 25px;
+    /* margin-left: 10px; */
+}
+.container aside ul {
+    padding: 30px;
+    /* margin-right: 30px; */
+    list-style: none;
+    
+}
+.container aside ul li {
+    border-radius: 5px;
+    background-color: #efefef;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+}
+.container aside h3{
+
+    text-align: center;
+    margin:0 30px ;
+    padding: 20px 0;
+    border-bottom:  1px solid ;
+}
+.container main{
+    display: flex;
+    justify-content: space-around;
+    flex: 70%;
+    
+    flex-wrap: wrap;
+    /* background-color: black; */
+}
+.container main > div {
+    margin-top: 5px;
+    background-color: rgb(144, 134, 153);
+    border-radius: 2px;
+    flex : 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.container main > div > img{
+    width: 100%;
+    height: auto;
+}
+@media screen and (max-width:700px) {
+    .container{
+        flex-direction: column;
+    }
+    .container main{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
+@font-face {
+    font-family: vazir-bold;
+    src: url(./fonts/Vazirmatn-Bold.woff2);
+}
+@font-face {
+    font-family: vazir;
+    src: url(./fonts/Vazirmatn-Light.woff2);
+}
