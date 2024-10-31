@@ -9,11 +9,23 @@ var student ={
             while(i){
                   document.getElementById("demo").innerHTML += "*";
                   i--;
+                  console.log(i)
             }
       },
       [key]:"c1"
 }
 
-console.log(student.name);
-console.log(student[key]);
-student.walk();
+if("name" in student){
+      console.log("name exists")
+}
+      
+
+for(p in student){
+      if(typeof student[p] === "function"){
+            student[p]();
+      }
+      else
+      console.log(student[p])
+}
+
+
