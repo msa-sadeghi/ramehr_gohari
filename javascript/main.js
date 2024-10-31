@@ -1,31 +1,24 @@
 
-var key = "className";
-var student ={
-      name:"ali",
-      family:"blalalla",
-      age:20,
-      walk: function(){
-            var i = 10;
-            while(i){
-                  document.getElementById("demo").innerHTML += "*";
-                  i--;
-                  console.log(i)
-            }
-      },
-      [key]:"c1"
-}
+var testStirng = "hi";
+console.log(testStirng, typeof testStirng)
 
-if("name" in student){
-      console.log("name exists")
-}
-      
-
-for(p in student){
-      if(typeof student[p] === "function"){
-            student[p]();
-      }
-      else
-      console.log(student[p])
-}
-
-
+testStirng = Number(testStirng)
+console.log(testStirng, typeof testStirng)
+var grade = "12.34"
+console.log(grade, typeof grade)
+grade = parseFloat(grade)
+console.log(grade, typeof grade)
+grade = parseInt(grade)
+console.log(grade, typeof grade)
+var y = "15"
+y = +y
+console.log(y, typeof y)
+var z = 1234;
+z = String(z)
+console.log(z, typeof z)
+var z = 1234;
+z = z.toString()
+console.log(z, typeof z)
+var k = 0
+k = Boolean(k)
+console.log(k, typeof k)
