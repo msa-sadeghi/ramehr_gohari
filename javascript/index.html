@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <!-- <body onload="load()"> -->
   <body>
-    <button onclick="document.write(x)">کلیک کنید</button>
-    <div id="demo"></div>
-    <script src="./main.js"></script>
+    <input
+      type="text"
+      onkeydown="keyDown(event)"
+      onchange="inputChanger(event)"
+    />
+    <button onclick="clicked(event)">تایید</button>
+    <div onmouseover="mouseover(event)">اساساساسا</div>
   </body>
+  <script src="./main.js"></script>
 </html>
