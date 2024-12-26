@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      {
+        /* 'use strict'
+      function myF() {
+        console.log(this);
+      }
+      myF(); */
+      }
+      student = {
+        name: "sara",
+        scores: [90, 34, 78, 45, 100],
+        calcAve: function () {
+          let sum = 0;
+          //let myThis = this;
+          this.scores.forEach(
+            function sumAll(score) {
+              sum += score;
+              //console.log(myThis);
+              console.log(this);
+            }.bind(this)
+          );
+          return sum;
+        },
+      };
+      console.log(student.calcAve());
+    </script>
+  </body>
+</html>
