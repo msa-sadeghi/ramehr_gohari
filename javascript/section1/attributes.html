@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="myDiv"
+      class="test-class"
+      data-developer="armin"
+      data-project-manager="nikan"
+    >
+      <input type="checkbox" checked test="salam" />
+      <input type="text" value="username" />
+    </div>
+    <script>
+      console.log(myDiv.childNodes[1].type);
+      console.log(myDiv.className);
+      console.log(myDiv.id);
+      console.log(myDiv.childNodes[1].getAttribute("test"));
+      myDiv.childNodes[1].setAttribute("new_attribute", "new_value");
+      console.log(myDiv.childNodes[3].value);
+      myDiv.childNodes[3].value = "arshia";
+      console.log(myDiv.dataset.developer);
+      console.log(myDiv.dataset.projectManager);
+    </script>
+  </body>
+</html>

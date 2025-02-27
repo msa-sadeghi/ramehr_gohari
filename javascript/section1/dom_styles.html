@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="toggleP()">show/hide</button>
+    <button onclick="changeColor()">change color</button>
+    <div
+      id="test"
+      class="box box2"
+      style="width: 300px; height: 300px"
+      ;
+      padding="300px"
+    >
+      <p>this is test</p>
+    </div>
+    <script>
+      function toggleP() {
+        myDiv.classList.toggle("hidden");
+      }
+      function changeColor() {
+        myDiv.style.backgroundColor = prompt("which color? ");
+      }
+      let myDiv = document.getElementById("test");
+      console.log(myDiv.classList);
+      myDiv.classList.add("box4", "box5");
+      console.log(myDiv.style);
+      console.log(myDiv.style.width);
+      let m = getComputedStyle(myDiv);
+      console.log(m.padding);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myDiv">
+      <input type="checkbox" />
+    </div>
+
+    <button onclick="getPlace()">create new item</button>
+    <div class="new-elements"></div>
+
+    <script>
+      function getPlace() {
+        creator();
+      }
+      function creator() {
+        let li = document.createElement("li");
+        li.innerHTML = "<strong>new Item</strong>";
+        
+        newElem1.append(li);
+      }
+      let myDiv = document.getElementsByClassName("new-elements")[0];
+      let newElem1 = document.createElement("ul");
+      newElem1.className = "my-list";
+      newElem1.innerHTML = '<li id="first"> first list </li>';
+      myDiv.append(newElem1);
+
+      /*let newDiv = document.createElement("div");
+      newDiv.appendChild(document.createElement("div"));
+      newDiv.appendChild(document.createTextNode("Helllo"));
+      document.body.append(newDiv);*/
+    </script>
+  </body>
+</html>
