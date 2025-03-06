@@ -13,8 +13,10 @@
 
     <div class="login-page">
         <div class="form">
-                <input type="text" placeholder="username" class="username" />
-                <input type="password" placeholder="password" class="password" />
+                <input onkeydown="userValidation()" type="text" placeholder="username" class="username" />
+                <span id="userspan" style="display: none;">Must Contain 8 Characters</span>
+                <input onkeydown="passValidation()" type="password" placeholder="password" class="password" />
+                <span id="passwordspan" style="display: none;">Must Contain 8 Characters</span>
                 <button onclick="dataValidation()">login</button>
                 <p class="message">Not registered? <a>Create an account</a></p>
         </div>

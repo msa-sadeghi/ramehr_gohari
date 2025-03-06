@@ -1,22 +1,33 @@
 const userName = document.querySelector('.username')
 const password = document.querySelector('.password')
-const modal = document.querySelector('.modal')
+const userspan = document.getElementById('userspan')
+const passwordspan = document.getElementById('passwordspan')
 
-function dataValidation(){
+function userValidation(){
     let userNameValue = userName.value
     let passwordValue = password.value
-    if(userNameValue.length < 8 || passwordValue.length < 8){
-        modal.style.display = "block"
-        modal.style.background = "red"
-        modal.style.display = "block"
-        modal.innerText = "اطلاعات ناقص است"
+    if(userNameValue.length < 8 ){
+        userspan.style.display = "block"
+        userspan.style.background = "red"
+        userspan.style.display = "block"
+        userspan.innerText = "اطلاعات ناقص است"
     }
     else{
-        modal.style.display = "block"
-        modal.style.background = "green"
-        modal.innerText = "اطلاعات درست است"
+        userspan.style.display = "none"
     }
-    setTimeout(function(){
-        modal.style.display = "none"
-    }, 3000)
+    
+}
+function passValidation(){
+    let userNameValue = userName.value
+    let passwordValue = password.value
+    
+    if(passwordValue.length < 8 ){
+        passwordspan.style.display = "block"
+        passwordspan.style.background = "red"
+        passwordspan.style.display = "block"
+        passwordspan.innerText = "اطلاعات ناقص است"
+    }
+    else{
+        passwordspan.style.display = "none"
+    }
 }
