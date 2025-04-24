@@ -87,3 +87,8 @@ body {
 .form .form-element .password-policies>div.active {
     color: #111;
 }
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
