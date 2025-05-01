@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <title></title>
+    <style>
+      ul{
+        border: 3px solid red;
+        height: 400px;
+        overflow: auto;
+      }
+    </style>
   </head>
 
-  <body>
-    <div class="container">
+  <body oncontextmenu="return false">
+    <!-- <div class="container">
 
-      <ul class="list-group todos mx-auto text-light">
+      <ul  class="list-group todos  text-light">
         
       </ul>
 
@@ -23,9 +30,10 @@
           </label>
           <input type="text" class="form-control m-auto" name="add"/>
       </form>
-  </div>
+  </div> -->
 
-
+  <!-- <button oncontextmenu="myFunction()">Right Click</button> -->
+<textarea name="" id="editor" cols="30" rows="10">Lorem ipsum dolor sit amet.</textarea>
     <script src="script.js"></script>
   </body>
 </html>
