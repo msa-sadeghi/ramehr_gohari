@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.gray{
+    width: 100%;
+    background-color: gray;
+    height: 500px;
+}
+.blue{
+    width: 100%;
+    background-color: blue;
+    height: 500px;
+}
+
+#scroll{
+    height: 10px;
+    background-color: red;
+    
+}
