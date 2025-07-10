@@ -26,6 +26,18 @@
 
 // window.console.log("blalal")
 
-let div = document.querySelector('div')
-console.log(div.clientHeight)
-console.log(div.clientWidth)
+// let div = document.querySelector('div')
+// console.log(div.clientHeight)
+// console.log(div.clientWidth)
+
+let scrollElem = document.querySelector("#scroll")
+window.addEventListener("scroll", function(){
+    let scrollTop = this.window.scrollY
+    let documentHeight = this.document.body.clientHeight
+    let windowHeight = this.window.innerHeight
+    
+    let scrollPercent = scrollTop / (documentHeight - windowHeight)
+    
+    scrollElem.style.width = scrollPercent * 100 + '%'
+
+})
