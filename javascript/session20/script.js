@@ -26,3 +26,27 @@ let suggestions = [
     "What does HTML stands for?",
     "What does CSS stands for?",
 ];
+
+
+let searchInputElem = document.querySelector('input')
+let autocomBox = document.querySelector('.autocom-box')
+let searchInputWrapper = document.querySelector('.search-input')
+
+searchInputElem.addEventListener('keyup', function(){
+    let searchvalue = searchInputElem.value
+    if (searchvalue){
+        searchInputWrapper.classList.add('active')
+        let filteredeWords = suggestions.filter(function(word){
+            return word.toLocaleLowerCase().startsWith(searchvalue.toLocaleLowerCase())
+        })
+        suggestionWordsgenerator(filteredeWords)
+    }else{
+        searchInputWrapper.classList.remove('active')
+    }
+})
+function suggestionWordsgenerator(wordsArray){
+    let listItemArray = wordsArray.map(function(word){
+        return '<li>' + word + '</li>'
+    })
+    autocomBox.innerHTML = listItemArray
+}
