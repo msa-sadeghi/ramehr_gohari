@@ -48,5 +48,16 @@ function suggestionWordsgenerator(wordsArray){
     let listItemArray = wordsArray.map(function(word){
         return '<li>' + word + '</li>'
     })
-    autocomBox.innerHTML = listItemArray
+    let result = listItemArray.join('')
+    autocomBox.innerHTML = result
+
+
+    let items = autocomBox.querySelectorAll('li')
+    items.forEach(function(li){
+        li.addEventListener('click', function(e){
+            searchInputElem.value = e.target.textContent
+            searchInputWrapper.classList.remove('active')
+
+        })
+    })
 }
